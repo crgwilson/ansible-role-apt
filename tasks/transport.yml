@@ -1,0 +1,6 @@
+---
+- name: Install apt-transport-https
+  apt:
+    name: "{{ apt_https_transport_packages }}"
+    state: present
+  when: apt_install_https_transport

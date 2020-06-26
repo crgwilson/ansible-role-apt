@@ -1,0 +1,18 @@
+---
+- name: Configure apt
+  template:
+    src: "etc/apt/apt.conf.d/{{ item }}.j2"
+    dest: "/etc/apt/apt.conf.d/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  loop:
+    - 10recommends
+
+- include: transport.yml
+- include: unattended-upgrades.yml
+
+- name: Install miscellaneous packages
+  apt:
+    name: "{{ apt_packages }}"
+    state: present

@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: crgwilson
+  role_name: apt
+  description: Configure APT and install arbitrary packages
+  license: Apache v2
+  min_ansible_version: 2.4
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+        - stretch
+
+  galaxy_tags:
+    - apt
+
+dependencies: []

@@ -1,0 +1,37 @@
+---
+apt_preferences: []
+
+apt_install_https_transport: true
+apt_https_transport_packages:
+  - apt-transport-https
+
+apt_install_unattended_upgrades: true
+apt_unattended_upgrades_packages:
+  - unattended-upgrades
+
+apt_install_recommends: 1
+apt_install_suggests: 1
+
+apt_periodic_update_package_lists: 1
+apt_periodic_download_upgradeable_packages: 1
+apt_periodic_autoclean_interval: 7
+apt_periodic_unattended_upgrade: 1
+
+apt_unattended_upgrade_origins_patterns:
+  - "${distro_id} ${distro_codename}-security"
+  - "${distro_id} ${distro_codename}-updates"
+apt_unattended_upgrade_package_blacklist: []
+apt_unattended_upgrade_auto_fix_interrupted_dpkg: false
+apt_unattended_upgrade_minimal_steps: true
+apt_unattended_upgrade_install_on_shutdown: false
+apt_unattended_upgrade_mail: []
+apt_unattended_upgrade_mail_only_on_error: false
+apt_unattended_upgrade_remove_unused_kernel_packages: true
+apt_unattended_upgrade_remove_unused_dependencies: true
+apt_unattended_upgrade_automatic_reboot: true
+apt_unattended_upgrade_automatic_reboot_with_users: false
+apt_unattended_upgrade_automatic_reboot_time: now
+apt_unattended_upgrade_syslog_enable: false
+apt_unattended_upgrade_syslog_facility: daemon
+
+apt_packages: []
