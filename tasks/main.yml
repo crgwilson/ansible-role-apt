@@ -9,6 +9,15 @@
   loop:
     - 10recommends
 
+- name: Configure apt preferences
+  template:
+    src: etc/apt/preferences.d/99preferences.j2
+    dest: /etc/apt/preferences.d/99preferences
+    owner: root
+    group: root
+    mode: 0644
+  when: apt_preferences | length > 0
+
 - include: transport.yml
 - include: unattended-upgrades.yml
 
