@@ -21,15 +21,7 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
     pre_build_image: true
-provisioner:
-  name: ansible
-  lint:
-    name: ansible-lint
-  env:
-    ANSIBLE_ROLES_PATH: ../../..
 scenario:
   name: default
 verifier:
   name: testinfra
-  lint:
-    name: flake8
