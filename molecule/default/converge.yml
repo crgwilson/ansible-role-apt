@@ -3,6 +3,11 @@
   hosts: all
   become: true
 
+  pre_tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: true
+
   tasks:
     - name: "Include ansible-role-apt"
       include_role:
