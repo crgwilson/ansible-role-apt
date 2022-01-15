@@ -3,5 +3,7 @@
   hosts: all
   become: true
 
-  roles:
-    - role: ansible-role-apt
+  tasks:
+    - name: "Include ansible-role-apt"
+      include_role:
+        name: "ansible-role-apt"

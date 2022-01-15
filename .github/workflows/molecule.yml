@@ -1,10 +1,6 @@
 ---
 name: Molecule Test
-on:
-  push: ~
-  pull_request: ~
-  schedule:
-    - cron: '30 11 * * *'
+on: ["push", "pull_request"]
 
 jobs:
   build:
